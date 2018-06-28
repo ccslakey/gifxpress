@@ -1,11 +1,13 @@
 html
   head
     title='Crazy Gifs!'
+    link(href="http://localhost:3000/styles.css", rel="stylesheet", type="text/css")
   body
+    h1 Hello
     form(method='POST' action='/search')
       input(type="text" for='q' id="q-inp")
       input(type="submit" id="q-search" value="Gifs!")
 
     if data
       each gif in data
-        img.gif(src=`${gif.embed_url}`)
+        img.gif(src=`${gif.embed_url}`) // NOT RIGHT!
