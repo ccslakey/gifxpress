@@ -1,0 +1,11 @@
+html
+  head
+    title='Crazy Gifs!'
+  body
+    form(method='POST' action='/search')
+      input(type="text" for='q' id="q-inp")
+      input(type="submit" id="q-search" value="Gifs!")
+
+    if data
+      each gif in data
+        img.gif(src=`${gif.embed_url}`)
